@@ -18,11 +18,8 @@
     </div>
     <div class="container">
         <main>
-            <?php include 'add.php';?>
-            <form method="get" action="">
-                <input type="submit" value="Добавить товар">    
-            </form>
-            
+            <?php include 'add.php';?>        
+                <input type="submit" value="Добавить товар" OnClick="location.href='addProduct.php'">    
         </main>
     </div> 
     </div>
