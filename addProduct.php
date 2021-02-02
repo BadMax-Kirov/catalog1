@@ -1,8 +1,10 @@
+<link rel='stylesheet' href='style.css' type="text/css"/>
 <?php
     require 'DatabaseShell.php';
     $db = new DatabaseShell('localhost', 'root', 'root', 'catalog');
 ?>  
-    <form method="POST" action="">
+    <div class="main_table">
+    <form method="POST" action="" class="table">
         <label>Наименование товара</label>
         <input type='text' name = "title"><br>
         <label>Код товара</label>
@@ -11,6 +13,7 @@
         <input type='text' name = "price"><br>
         <input type='submit' value="Сохранить данные">
     </form>   
+    </div>
 
  <?php   
     if(isset($_POST['title']) AND isset($_POST['product_code']) AND isset($_POST['price'])){
@@ -20,8 +23,6 @@
         
         newProduct($db, $title, $product_code, $price);
     }
-    else 
-        echo 'Error: variables not found';
     
     function newProduct($db, $title, $product_code, $price)
     {

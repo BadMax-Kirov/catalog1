@@ -1,12 +1,10 @@
-footer
-{
-    color: red;
+.main_table{
+    border: solid 1px black;
+    width: 30%;
+    text-align: left;
 }
-header a{
-    margin-right: 5px;
-    color: blue;
-    text-decoration: none;
-}
-header a.active{
-    text-decoration: underline;
+.table{
+    border: solid 1px black;
+    width: 30%;
+    text-align: right;
 }

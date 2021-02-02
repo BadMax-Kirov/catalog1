@@ -5,16 +5,13 @@
     $db = new DatabaseShell('localhost', 'root', 'root', 'catalog');
     //Получим товары
     $product = $db->getAll('products');
-    setProduct($product);
-    //Добавление нового товара
-    //newProduct($db);
-    
+    setProduct($product);  
     // Удаление товара:
     //delProduct($db);
 
-    function setProduct ($data)
+    function setProduct($data)
     {
-        $content = '<table>
+        $content = '<table class = "main_table">
             <tr>
             <th>Наименование</th>
             <th>Код товара</th>
@@ -34,11 +31,6 @@
 
         }   
         echo $content .='</table>';
-    }
-    
-    function newProduct($db)
-    {
-        $db->save('products', ['title' => $title, 'product_code' => $product_code, 'price' => $price]);
     }
     
     function delProduct($db)

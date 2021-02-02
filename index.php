@@ -18,8 +18,8 @@
     </div>
     <div class="container">
         <main>
-            <?php include 'add.php';?>        
-                <input type="submit" value="Добавить товар" OnClick="location.href='addProduct.php'">    
+            <?php include 'setProduct.php';?>        
+                <br><input type="submit" value="Добавить новый товар" OnClick="location.href='addProduct.php'">    
         </main>
     </div> 
     </div>
