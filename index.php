@@ -3,8 +3,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <title>каталог</title>
-  <meta name="description" content="Форма заявки на кредит">
+  <title>Каталог товаров</title>
+  <meta name="description" content="Каталог товаров">
   <link rel='stylesheet' href='style.css' type="text/css"/>
   
   
@@ -25,7 +25,7 @@
     </div>
     <div class="container">
         <footer>
-            footer
+            <p>footer</p>
         </footer><br>
         
     

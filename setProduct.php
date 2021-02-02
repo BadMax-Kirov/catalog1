@@ -11,13 +11,13 @@
 
     function setProduct($data)
     {
-        $content = '<table class = "main_table">
+        $content = '<table cellspacing="1" border = "1" cellpadding="0">
             <tr>
             <th>Наименование</th>
             <th>Код товара</th>
             <th>Цена</th>
-            <th>edit</th>
-            <th>delete</th>
+            <th>Редактирование</th>
+            <th>Удаление</th>
             </tr>';
 
         foreach ($data as $value){
@@ -25,8 +25,8 @@
                 <td>{$value['title']}</td>
                 <td>{$value['product_code']}</td>
                 <td>{$value['price']}</td>
-                <td><a href>edit</a></td>
-                <td><a href>delete</a></td>
+                <td><a href>Редактировать</a></td>
+                <td><a href>Удалить</a></td>
             </tr>";
 
         }   
