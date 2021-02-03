@@ -18,8 +18,8 @@
     <div class="container">
         <main>
             <p style="font-size: 13px;">Сортировать по: 
-            <form action="" method="post">
-            <select id="selectvalue">
+            <form action="" method="POST">
+            <select name="menu">
                 <option>цене, по возрастанию</option>
                 <option>цене, по убыванию</option>
             </select>
