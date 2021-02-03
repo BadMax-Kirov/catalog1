@@ -18,10 +18,12 @@
     <div class="container">
         <main>
             <p style="font-size: 13px;">—ортировать по: 
+            <form action="" method="post">
             <select id="selectvalue">
                 <option>цене, по возрастанию</option>
                 <option>цене, по убыванию</option>
             </select>
+            </form>
                 </p>
             <?php include 'setProduct.php';?>        
             <br><input style="margin-left: 502px" type="submit" value="ƒобавить новый товар" OnClick="location.href='addProduct.php'">    
