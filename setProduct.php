@@ -4,10 +4,14 @@
     // Создаем объект для работы:
     $db = new DatabaseShell('localhost', 'root', 'root', 'catalog');
     //Получим товары
+     // Удаление товара:
+    if (isset($_GET['delete'])){
+        $id = $_GET['delete'];
+        delProduct($db, $id);
+    }
     $product = $db->getAll('products');
     setProduct($product);  
-    // Удаление товара:
-    //delProduct($db);
+   
 
     function setProduct($data)
     {
@@ -26,25 +30,18 @@
                 <td>{$value['product_code']}</td>
                 <td>{$value['price']}</td>
                 <td><a href>Редактировать</a></td>
-                <td><a href>Удалить</a></td>
+                <td><a href =\"?delete={$value['id']}\">Удалить</a></td>
             </tr>";
 
         }   
         echo $content .='</table>';
     }
     
-    function delProduct($db)
+    function delProduct($db, $id)
     {
-        $db->del('products', 31);
+        $db->del('products', $id);
     }
 ?>
 
 
-<?php/*
-	$users = $db->getAll('users', [1, 2, 3, 5]);
-?>
-Получим  по условию:
 
-<?php
-	$users = $db->getAll('users', 'where id >= 3'); */
-?>
