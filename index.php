@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <header>
-            <p>Каталог товаров</p>
+            <?php include 'elems\header.php';?> 
         </header>
     </div>
     <div class="container">
@@ -25,7 +25,7 @@
     </div>
     <div class="container">
         <footer>
-            <p>footer</p>
+            <?php include 'elems\footer.php';?> 
         </footer><br>
         
     

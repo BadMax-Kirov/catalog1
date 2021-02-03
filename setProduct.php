@@ -3,12 +3,13 @@
 
     // Создаем объект для работы:
     $db = new DatabaseShell('localhost', 'root', 'root', 'catalog');
-    //Получим товары
+    
      // Удаление товара:
     if (isset($_GET['delete'])){
         $id = $_GET['delete'];
         delProduct($db, $id);
     }
+    //Получение товары
     $product = $db->getAll('products');
     setProduct($product);  
    
@@ -44,4 +45,11 @@
 ?>
 
 
+<?php/*
+	$users = $db->getAll('users', [1, 2, 3, 5]);
+?>
+Получим юзеров по условию:
 
+<?php
+	$users = $db->getAll('users', 'where id >= 3'); */
+?>
