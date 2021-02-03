@@ -35,6 +35,15 @@
                 return $data;
         }
 
+        public function setProductId($table, $id)
+        {
+               $query = "SELECT * FROM $table WHERE id = '$id'";
+               $result = mysqli_query($this->link, $query);
+               for($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+              
+               return $data;
+        }
+        
         public function selectAll($table, $condition)
         {
                 // получает массив записей по условию

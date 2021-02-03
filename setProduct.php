@@ -30,7 +30,7 @@
                 <td>{$value['title']}</td>
                 <td>{$value['product_code']}</td>
                 <td>{$value['price']}</td>
-                <td><a href>Редактировать</a></td>
+                <td><a href =\"edit.php?id={$value['id']}\">Редактировать</a></td>
                 <td><a href =\"?delete={$value['id']}\">Удалить</a></td>
             </tr>";
 
