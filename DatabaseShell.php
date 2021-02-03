@@ -16,7 +16,6 @@
             $price = $data['price'];
 
             $query = "INSERT INTO $table SET title = '$title', product_code = '$product_code', price = $price";
-
             mysqli_query($this->link, $query); 
         }
 
@@ -52,12 +51,12 @@
             $price = $data['price'];
             
             $query = "UPDATE $table SET title = '$title', product_code ='$product_code', "
-                     . "price ='$price' WHERE id= '$id'";
+                   . "price ='$price' WHERE id= '$id'";
             mysqli_query($this->link, $query); 
     }
         
         public function selectAll($table, $condition)
         {
-                // получает массив записей по условию
+            // получает массив записей по условию
         }
     }

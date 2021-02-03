@@ -7,7 +7,6 @@
   <meta name="description" content="Каталог товаров">
   <link rel='stylesheet' href='style.css' type="text/css"/>
   
-  
 </head>
 
 <body>
@@ -18,8 +17,14 @@
     </div>
     <div class="container">
         <main>
+            <p style="font-size: 13px;">Сортировать по: 
+            <select id="selectvalue">
+                <option>цене, по возрастанию</option>
+                <option>цене, по убыванию</option>
+            </select>
+                </p>
             <?php include 'setProduct.php';?>        
-            <br><input style="margin-left: 500px" type="submit" value="Добавить новый товар" OnClick="location.href='addProduct.php'">    
+            <br><input style="margin-left: 502px" type="submit" value="Добавить новый товар" OnClick="location.href='addProduct.php'">    
         </main>
     </div> 
     </div>
@@ -28,6 +33,5 @@
             <?php include 'elems\footer.php';?> 
         </footer><br>
         
-    
 </body>
 </html>
