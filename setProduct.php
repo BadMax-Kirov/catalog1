@@ -40,4 +40,11 @@
 ?>
 
 
+<?php/*
+	$users = $db->getAll('users', [1, 2, 3, 5]);
+?>
+Получим  по условию:
 
+<?php
+	$users = $db->getAll('users', 'where id >= 3'); */
+?>
