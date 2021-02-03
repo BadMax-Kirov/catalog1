@@ -28,21 +28,33 @@
 
         public function getAll($table)
         {
-                $query = "SELECT * FROM $table";
-                $result = mysqli_query($this->link, $query);
-                for($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
-                
-                return $data;
+            $query = "SELECT * FROM $table";
+            $result = mysqli_query($this->link, $query);
+            for($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+
+            return $data;
         }
 
         public function setProductId($table, $id)
         {
-               $query = "SELECT * FROM $table WHERE id = '$id'";
-               $result = mysqli_query($this->link, $query);
-               for($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
-              
-               return $data;
+           $query = "SELECT * FROM $table WHERE id = '$id'";
+           $result = mysqli_query($this->link, $query);
+           for($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+
+           return $data;
         }
+        
+        public function editProduct($table, $data)
+        { 
+            $id = $data['id'];
+            $title = $data['title'];
+            $product_code = $data['product_code'];
+            $price = $data['price'];
+            
+            $query = "UPDATE $table SET title = '$title', product_code ='$product_code', "
+                     . "price ='$price' WHERE id= '$id'";
+            mysqli_query($this->link, $query); 
+    }
         
         public function selectAll($table, $condition)
         {

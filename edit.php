@@ -34,4 +34,14 @@
     </div>
 
 <?php   
+    } else echo 'Error 404! Not found id!';
+    
+    if(isset($_POST['title']) AND isset($_POST['product_code']) AND isset($_POST['price'])){
+        $id = $_GET['id'];
+        $title = $_POST['title'];
+        $product_code = $_POST['product_code'];
+        $price = $_POST['price'];
+        
+        $db ->editProduct('products', ['id' => $id, 'title' => $title, 'product_code' => $product_code, 'price' => $price]);
+        header('location: index.php');
     }
