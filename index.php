@@ -19,7 +19,7 @@
     <div class="container">
         <main>
             <?php include 'setProduct.php';?>        
-                <br><input type="submit" value="Добавить новый товар" OnClick="location.href='addProduct.php'">    
+            <br><input style="margin-left: 500px" type="submit" value="Добавить новый товар" OnClick="location.href='addProduct.php'">    
         </main>
     </div> 
     </div>
