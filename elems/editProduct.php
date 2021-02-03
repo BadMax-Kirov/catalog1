@@ -7,15 +7,15 @@
         <form method="POST" action="" class = "input">
             <div class="field">
                 <label>Наименование товара</label>
-                <input type='text' name = "title">
+                <input type='text' name = "title" value="">
             </div><br>
             <div class="field">
                 <label>Код товара</label>
-                <input type='text' name = "product_code">
+                <input type='text' name = "product_code" value="">
             </div><br>
             <div class="field">
                 <label>Цена товара</label>
-                <input type='text' name = "price">
+                <input type='text' name = "price" value=""> 
             </div><br>
         <input type='submit' value="Сохранить данные">
     </form>   
