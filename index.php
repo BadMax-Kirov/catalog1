@@ -17,14 +17,14 @@
     </div>
     <div class="container">
         <main>
-            <p style="font-size: 13px;">Сортировать по: 
             <form action="" method="POST">
+            <div style="font-size: 13px;">Сортировать по: 
             <select name="menu">
                 <option>цене, по возрастанию</option>
                 <option>цене, по убыванию</option>
             </select>
             </form>
-                </p>
+                </div>
             <?php include 'setProduct.php';?>        
             <br><input style="margin-left: 502px" type="submit" value="Добавить новый товар" OnClick="location.href='addProduct.php'">    
         </main>
