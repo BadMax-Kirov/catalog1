@@ -21,8 +21,8 @@
             <div style="font-size: 13px;">
                 Сортировать по: 
             <select name="menu">
-                <option value="up"> цене, по возрастанию </option>
-                <option value="down"> цене, по убыванию </option>
+                <option value="up" <?php if(isset($_POST['menu']) AND $_POST['menu'] == 'up'){ ?> selected="true" <?php } ?>> цене, по возрастанию </option>
+                <option value="down" <?php if(isset($_POST['menu']) AND $_POST['menu'] == 'down') { ?> selected="true" <?php } ?>> цене, по убыванию </option>
             </select>
                 от: 
                 <input type="text" name='from' size = "2" value='<?php if(isset($_POST['from'])) echo $_POST['from'];?>'>

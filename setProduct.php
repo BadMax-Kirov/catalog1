@@ -30,7 +30,7 @@
             $product = $db->selectPriceDown('products', $from, $before);
             setProduct($product);
 	break;
-	case 'down'://По возрастанию           
+	case 'down'://По возрастанию  
             $product = $db->selectPriceUp('products', $from, $before);
             setProduct($product);
 	break;
