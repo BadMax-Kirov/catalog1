@@ -9,22 +9,36 @@
         $id = $_GET['delete'];
         delProduct($db, $id);
     }
+    if(isset($_POST['from']) AND isset($_POST['before'])){
+        if(!empty($_POST['from'])){
+            $from = $_POST['from'];
+        } else {
+            $from = 1;
+        }
+        if(!empty($_POST['before'])){
+            $before = $_POST['before'];
+        } else {
+            $before = 1000000000;
+        } 
+    } else {
+        echo $from = 1;
+        echo $before = 1000000000;
+    }
     //Выпадающий список
     switch ($_POST['menu']) {
 	case 'up'://По убыванию
-		$product = $db->selectPriceDown('products');
-                setProduct($product);
-	  break;
-	case 'down'://По возрастанию
-		$product = $db->selectPriceUp('products');
-                setProduct($product);
-	  break;
-	
+            $product = $db->selectPriceDown('products', $from, $before);
+            setProduct($product);
+	break;
+	case 'down'://По возрастанию           
+            $product = $db->selectPriceUp('products', $from, $before);
+            setProduct($product);
+	break;
 	default:
-		//Получение товаров без фильтра
-                $product = $db->getAll('products');
-                setProduct($product);  
-	  break;
+            //Получение товаров без фильтра
+            $product = $db->getAll('products');
+            setProduct($product);  
+	break;
 }
        
     function setProduct($data)

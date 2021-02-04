@@ -21,15 +21,14 @@
             <div style="font-size: 13px;">
                 Сортировать по: 
             <select name="menu">
-                <option value="up"> цене, по возрастанию</option>
-                <option value="down"> цене, по убыванию</option>
+                <option value="up"> цене, по возрастанию </option>
+                <option value="down"> цене, по убыванию </option>
             </select>
+                от: 
+                <input type="text" name='from' size = "2">
+                до:  
+                <input type="text" name='before' size = "2">
                 <input type="submit" value=" Выполнить "><br><br>
-                Вывести по цене от: 
-                <input type="" name='from' size = "3">
-                до: 
-                <input type="" name='before' size = "3">
-                <input type="submit" value=" Фильтровать ">
             </form>
                 </div>
             <?php include 'setProduct.php';?>        

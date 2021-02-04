@@ -55,18 +55,18 @@
             mysqli_query($this->link, $query); 
     }
         
-        public function selectPriceUp($table)
+        public function selectPriceUp($table, $from, $before)
         {
-           $query = "SELECT * FROM $table ORDER BY price DESC";
+           $query = "SELECT * FROM $table WHERE price > $from AND price < $before ORDER BY price DESC";
            $result = mysqli_query($this->link, $query);
            for($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
 
            return $data;
         }
         
-        public function selectPriceDown($table)
+        public function selectPriceDown($table, $from, $before)
         {
-           $query = "SELECT * FROM $table ORDER BY price";
+           $query = "SELECT * FROM $table WHERE price > $from AND price < $before ORDER BY price";
            $result = mysqli_query($this->link, $query);
            for($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
 
