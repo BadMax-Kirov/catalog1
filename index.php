@@ -1,13 +1,11 @@
 <!doctype html>
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-  <title>Каталог товаров</title>
-  <meta name="description" content="Каталог товаров">
-  <link rel='stylesheet' href='style.css' type="text/css"/>
-  
-</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <title>Каталог товаров</title>
+        <meta name="description" content="Каталог товаров">
+        <link rel='stylesheet' href='style.css' type="text/css"/>
+    </head>
 
 <body>
     <div class="container">
@@ -20,19 +18,22 @@
             <form class="form" action="" method="POST">
             <div style="font-size: 13px;">
                 Сортировать по: 
-            <select name="menu">
-                <option value="up" <?php if(isset($_POST['menu']) AND $_POST['menu'] == 'up'){ ?> selected="true" <?php } ?>> цене, по возрастанию </option>
-                <option value="down" <?php if(isset($_POST['menu']) AND $_POST['menu'] == 'down') { ?> selected="true" <?php } ?>> цене, по убыванию </option>
-            </select>
+                <select name="menu">
+                    <option value="up" <?php if(isset($_POST['menu']) AND $_POST['menu'] == 'up')
+                    { ?> selected="true" <?php } ?>> цене, по возрастанию </option>
+                    <option value="down" <?php if(isset($_POST['menu']) AND $_POST['menu'] == 'down') 
+                    { ?> selected="true" <?php } ?>> цене, по убыванию </option>
+                </select>
                 от: 
-                <input type="text" name='from' size = "2" value='<?php if(isset($_POST['from'])) echo $_POST['from'];?>'>
+                    <input type="text" name='from' size = "2" value='<?php if(isset($_POST['from'])) echo $_POST['from'];?>'>
                 до:  
-                <input type="text" name='before' size = "2" value='<?php if(isset($_POST['before'])) echo $_POST['before'];?>'>
-                <input type="submit" value=" Выполнить "><br><br>
-            </form>
-                </div>
+                    <input type="text" name='before' size = "2" value='<?php if(isset($_POST['before'])) echo $_POST['before'];?>'>
+                    <input type="submit" value=" Выполнить "> <br>
+                </form>
+            </div>
             <?php include 'setProduct.php';?>        
-            <br><input style="margin-left: 502px" type="submit" value="Добавить новый товар" OnClick="location.href='addProduct.php'">    
+            <br><input style="margin-left: 502px" type="submit" value="Добавить новый товар" OnClick="location.href='addProduct.php'"> 
+            <input type="submit" value=" Сбросить " OnClick="location.href='clean.php'">
         </main>
     </div> 
     </div>
