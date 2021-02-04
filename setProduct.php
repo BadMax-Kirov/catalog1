@@ -9,11 +9,24 @@
         $id = $_GET['delete'];
         delProduct($db, $id);
     }
-    //Получение товары
-    $product = $db->getAll('products');
-    setProduct($product);  
-   
-
+    
+    switch ($_POST['menu']) {
+	case 'up':
+		$product = $db->selectPriceDown('products');
+                setProduct($product);
+	  break;
+	case 'down':
+		$product = $db->selectPriceUp('products');
+                setProduct($product);
+	  break;
+	
+	default:
+		//Получение товаров без фильтра
+                $product = $db->getAll('products');
+                setProduct($product);  
+	  break;
+}
+       
     function setProduct($data)
     {
         $content = '<table cellspacing="1" border = "1" cellpadding="0">

@@ -55,8 +55,21 @@
             mysqli_query($this->link, $query); 
     }
         
-        public function selectAll($table, $condition)
+        public function selectPriceUp($table)
         {
-            // получает массив записей по условию
+           $query = "SELECT * FROM $table ORDER BY price DESC";
+           $result = mysqli_query($this->link, $query);
+           for($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+
+           return $data;
+        }
+        
+        public function selectPriceDown($table)
+        {
+           $query = "SELECT * FROM $table ORDER BY price";
+           $result = mysqli_query($this->link, $query);
+           for($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+
+           return $data;
         }
     }

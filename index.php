@@ -17,12 +17,13 @@
     </div>
     <div class="container">
         <main>
-            <form action="" method="POST">
+            <form class="form" action="" method="POST">
             <div style="font-size: 13px;">Сортировать по: 
             <select name="menu">
-                <option>цене, по возрастанию</option>
-                <option>цене, по убыванию</option>
+                <option value="up"> цене, по возрастанию</option>
+                <option value="down"> цене, по убыванию</option>
             </select>
+                <input type="submit" value=" Фильтровать ">
             </form>
                 </div>
             <?php include 'setProduct.php';?>        
