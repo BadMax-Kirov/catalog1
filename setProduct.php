@@ -21,8 +21,8 @@
             $before = 1000000000;
         } 
     } else {
-        echo $from = 1;
-        echo $before = 1000000000;
+        $from = 1;
+        $before = 1000000000;
     }
     //Выпадающий список
     switch ($_POST['menu']) {

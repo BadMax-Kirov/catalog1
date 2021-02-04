@@ -25,9 +25,9 @@
                 <option value="down"> цене, по убыванию </option>
             </select>
                 от: 
-                <input type="text" name='from' size = "2">
+                <input type="text" name='from' size = "2" value='<?php if(isset($_POST['from'])) echo $_POST['from'];?>'>
                 до:  
-                <input type="text" name='before' size = "2">
+                <input type="text" name='before' size = "2" value='<?php if(isset($_POST['before'])) echo $_POST['before'];?>'>
                 <input type="submit" value=" Выполнить "><br><br>
             </form>
                 </div>
