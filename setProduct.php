@@ -9,13 +9,13 @@
         $id = $_GET['delete'];
         delProduct($db, $id);
     }
-    
+    //Выпадающий список
     switch ($_POST['menu']) {
-	case 'up':
+	case 'up'://По убыванию
 		$product = $db->selectPriceDown('products');
                 setProduct($product);
 	  break;
-	case 'down':
+	case 'down'://По возрастанию
 		$product = $db->selectPriceUp('products');
                 setProduct($product);
 	  break;

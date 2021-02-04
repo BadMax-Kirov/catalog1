@@ -18,11 +18,17 @@
     <div class="container">
         <main>
             <form class="form" action="" method="POST">
-            <div style="font-size: 13px;">Сортировать по: 
+            <div style="font-size: 13px;">
+                Сортировать по: 
             <select name="menu">
                 <option value="up"> цене, по возрастанию</option>
                 <option value="down"> цене, по убыванию</option>
             </select>
+                <input type="submit" value=" Выполнить "><br><br>
+                Вывести по цене от: 
+                <input type="" name='from' size = "3">
+                до: 
+                <input type="" name='before' size = "3">
                 <input type="submit" value=" Фильтровать ">
             </form>
                 </div>
