@@ -1,6 +1,6 @@
 <link rel='stylesheet' href='style.css' type="text/css"/>
 <?php
-    require 'DatabaseShell.php';
+    require 'elems/DatabaseShell.php';
     $db = new DatabaseShell('localhost', 'root', 'root', 'catalog');
     
     if(isset($_GET['id'])){

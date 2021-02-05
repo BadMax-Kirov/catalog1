@@ -1,5 +1,5 @@
 <?php
-    require 'DatabaseShell.php';
+    require 'elems/DatabaseShell.php';
 
     // Создаем объект для работы:
     $db = new DatabaseShell('localhost', 'root', 'root', 'catalog');

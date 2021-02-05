@@ -20,20 +20,24 @@
                 Сортировать по: 
                 <select name="menu">
                     <option value="up" <?php if(isset($_POST['menu']) AND $_POST['menu'] == 'up')
-                    { ?> selected="true" <?php } ?>> цене, по возрастанию </option>
+                                        { ?> selected="true" <?php } ?>> цене, по возрастанию </option>
                     <option value="down" <?php if(isset($_POST['menu']) AND $_POST['menu'] == 'down') 
-                    { ?> selected="true" <?php } ?>> цене, по убыванию </option>
+                                        { ?> selected="true" <?php } ?>> цене, по убыванию </option>
                 </select>
                 от: 
                     <input type="text" name='from' size = "2" value='<?php if(isset($_POST['from'])) echo $_POST['from'];?>'>
                 до:  
                     <input type="text" name='before' size = "2" value='<?php if(isset($_POST['before'])) echo $_POST['before'];?>'>
-                    <input type="submit" value=" Выполнить "> <br>
-                </form>
+                    <input type="submit" value=" Выполнить "> 
+                  </form>
+           
             </div>
-            <?php include 'setProduct.php';?>        
+                 <input type="submit" value=" Сбросить " OnClick="location.href='clean.php'">
+
+            <?php include 'setProduct.php';?> 
+                 
             <br><input style="margin-left: 502px" type="submit" value="Добавить новый товар" OnClick="location.href='addProduct.php'"> 
-            <input type="submit" value=" Сбросить " OnClick="location.href='clean.php'">
+            
         </main>
     </div> 
     </div>
