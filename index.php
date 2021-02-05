@@ -17,8 +17,8 @@
                   $db = new DatabaseShell('localhost', 'root', 'root', 'catalog');
                   $product = $db->selectMaxMin('products');
             
-                  $from = $product[0]["MinCena"];
-                  $before = $product[0]["MaxCena"];
+                  $from = $product[0]["MinPrice"];
+                  $before = $product[0]["MaxPrice"];
             ?> 
         </header>
     </div>

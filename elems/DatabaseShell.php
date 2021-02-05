@@ -75,7 +75,7 @@
         
         public function selectMaxMin($table)
         {
-           $query = "SELECT MAX(price) AS MaxCena, MIN(price) AS MinCena FROM $table";
+           $query = "SELECT MAX(price) AS MaxPrice, MIN(price) AS MinPrice FROM $table";
            $result = mysqli_query($this->link, $query);
            for($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
 
