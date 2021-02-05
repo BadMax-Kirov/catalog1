@@ -1,9 +1,4 @@
 <?php
-    require 'elems/DatabaseShell.php';
-
-    // Создаем объект для работы:
-    $db = new DatabaseShell('localhost', 'root', 'root', 'catalog');
-    
      // Удаление товара:
     if (isset($_GET['delete'])){
         $id = $_GET['delete'];
