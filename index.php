@@ -15,7 +15,7 @@
     </div>
     <div class="container">
         <main>
-            <form class="form" action="" method="POST">
+            <form class="form"  method="POST">
             <div style="font-size: 13px;">
                 Сортировать по: 
                 <select name="menu">
@@ -28,11 +28,11 @@
                     <input type="text" name='from' size = "2" value='<?php if(isset($_POST['from'])) echo $_POST['from'];?>'>
                 до:  
                     <input type="text" name='before' size = "2" value='<?php if(isset($_POST['before'])) echo $_POST['before'];?>'>
-                    <input type="submit" value=" Выполнить "> 
+                    <input type="submit" action="" value=" Выполнить "> <button type="submit" formaction="clean.php">Сбросить</button>
                   </form>
            
             </div>
-                 <input type="submit" value=" Сбросить " OnClick="location.href='clean.php'">
+                 
 
             <?php include 'setProduct.php';?> 
                  
