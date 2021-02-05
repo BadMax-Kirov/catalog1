@@ -21,8 +21,10 @@
             $before = 1000000000;
         } 
     } else {
-        $from = 1;
-        $before = 1000000000;
+        $product = $db->selectMaxMin('products');
+            
+        $from = $product[0]["MinCena"];
+        $before = $product[0]["MaxCena"];
     }
     //Выпадающий список
     switch ($_POST['menu']) {

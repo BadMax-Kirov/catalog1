@@ -16,7 +16,7 @@
     <div class="container">
         <main>
             <form class="form"  method="POST">
-            <div style="font-size: 13px;">
+            <div style="font-size: 13px; padding: 3px">
                 Сортировать по: 
                 <select name="menu">
                     <option value="up" <?php if(isset($_POST['menu']) AND $_POST['menu'] == 'up')
@@ -25,10 +25,10 @@
                                         { ?> selected="true" <?php } ?>> цене, по убыванию </option>
                 </select>
                 от: 
-                    <input type="text" name='from' size = "2" value='<?php if(isset($_POST['from'])) echo $_POST['from'];?>'>
+                    <input type="text" name='from' size = "2" value='<?php if(isset($_POST['from'])) echo $_POST['from']; else echo $from?>'>
                 до:  
                     <input type="text" name='before' size = "2" value='<?php if(isset($_POST['before'])) echo $_POST['before'];?>'>
-                    <input type="submit" action="" value=" Выполнить "> <button type="submit" formaction="clean.php">Сбросить</button>
+                    <input style = "margin-left: 80px" type="submit" action="" value=" Выполнить "> <button type="submit" formaction="clean.php">Сбросить</button>
                   </form>
            
             </div>
