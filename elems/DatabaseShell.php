@@ -15,7 +15,8 @@
             $product_code = $data['product_code'];
             $price = $data['price'];
 
-            $query = "INSERT INTO $table SET title = '$title', product_code = '$product_code', price = $price";
+            $query = "INSERT INTO $table SET title = '$title', "
+                    . "product_code = '$product_code', price = $price";
             mysqli_query($this->link, $query); 
         }
 
@@ -57,7 +58,8 @@
         
         public function selectPriceUp($table, $from, $before)
         {
-           $query = "SELECT * FROM $table WHERE price >= $from AND price <= $before ORDER BY price DESC";
+           $query = "SELECT * FROM $table WHERE price >= $from "
+                   . "AND price <= $before ORDER BY price DESC";
            $result = mysqli_query($this->link, $query);
            for($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
 
