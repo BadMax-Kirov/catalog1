@@ -53,7 +53,7 @@
             $query = "UPDATE $table SET title = '$title', product_code ='$product_code', "
                    . "price ='$price' WHERE id= '$id'";
             mysqli_query($this->link, $query); 
-    }
+        }
         
         public function selectPriceUp($table, $from, $before)
         {

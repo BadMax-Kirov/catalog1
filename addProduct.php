@@ -4,7 +4,7 @@
     $db = new DatabaseShell('localhost', 'root', 'root', 'catalog');
 ?>  
     <div class="main">
-        <p style="margin-left: 20px; font-size: 18px; font-weight:bold; height: 5px">Карточка добавление нового товара</p>
+        <p style="margin-left: 20px; font-size: 18px; font-weight:bold; height: 5px">Карточка добавления нового товара</p>
         <form method="POST" action="" class = "input">
             <div class="field">
                 <label>Наименование товара</label>
