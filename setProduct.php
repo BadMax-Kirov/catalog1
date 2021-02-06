@@ -1,4 +1,5 @@
 <?php
+    $product = $db->selectMaxMin('products');
      // Удаление товара:
     if (isset($_GET['delete'])){
         $id = $_GET['delete'];
@@ -8,16 +9,14 @@
         if(!empty($_POST['from'])){
             $from = $_POST['from'];
         } else {
-            $from = 1;
+            $from = $product[0]["MinPrice"];;
         }
         if(!empty($_POST['before'])){
             $before = $_POST['before'];
         } else {
-            $before = 1000000000;
+            $before = $product[0]["MaxPrice"];
         } 
-    } else {
-        $product = $db->selectMaxMin('products');
-            
+    } else {   
         $from = $product[0]["MinPrice"];
         $before = $product[0]["MaxPrice"];
     }
